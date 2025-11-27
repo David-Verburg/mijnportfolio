@@ -1,0 +1,172 @@
+/* ========== Basis reset ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== Body / pagina ========== */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #f3f4f6; /* lichtgrijs */
+    color: #111827;            /* bijna zwart */
+    line-height: 1.7;
+}
+
+/* Wrapper centreert de kaart */
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+}
+
+/* ========== Card-stijl (wit, clean) ========== */
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 2.5rem 2.25rem;
+    max-width: 860px;
+    width: 100%;
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.06),
+        0 0 0 1px rgba(148, 163, 184, 0.25);
+}
+
+/* ========== Koppen ========== */
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.3rem;
+    color: #0f172a;
+    letter-spacing: 0.03em;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-top: 2.2rem;
+    margin-bottom: 0.75rem;
+    color: #111827;
+}
+
+h4 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+    color: #111827;
+    font-weight: 600;
+}
+
+/* ========== Tekst / paragrafen ========== */
+p {
+    margin-bottom: 1rem;
+    color: #374151;
+}
+
+p.lead {
+    font-size: 1.02rem;
+    color: #1f2933;
+}
+
+/* Sub-ondertitel onder je naam */
+.tagline {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 1.75rem;
+}
+
+.highlight {
+    color: #2563eb; /* blauw accent */
+    font-weight: 500;
+}
+
+/* ========== Lijsten ========== */
+ul {
+    margin: 0.5rem 0 1.6rem 1.3rem;
+    color: #374151;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+/* ========== Projecten ========== */
+.projects-grid {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+/* Projectkaartje */
+.project {
+    border-radius: 12px;
+    padding: 1.1rem 1.1rem 1.2rem;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.project:hover {
+    transform: translateY(-2px);
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    border-color: #d1d5db;
+}
+
+/* Project afbeelding */
+.project img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Project-tekst */
+.project p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+.project a {
+    text-decoration: none;
+}
+
+/* ========== Responsiveness ========== */
+@media (min-width: 768px) {
+    .card {
+        padding: 3rem 3rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 2rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
